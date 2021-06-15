@@ -1,9 +1,5 @@
 # MANAGE USER API REST
-En este ejercicio desarrollo una API REST para gestionar usuarios empleando `Spring Boot`, `Spring Security` y `Spring Data JPA`.  
-El almacenamiento de los datos se realiza en la base de datos `PostgreSQL` o en memoria usando `H2`, mediante la activación por variable de entorno del modo de persistencia. 
-La API fue documentada con `Open API Swagger` y testeada con `Postman` y pruebas automatizadas con `JUnit`.
-Los paquetes fueron estructurados siguiendo `Domain Driver Design` y se aplicaron patrones como Adapter, Fábricas, Repositorios entre otros. 
-Para optimizar las consultas dado el volumen de datos manejados se emplea `HATEOAS` para `Paginación` y manejo de hipertexto, compresión `gzip` y se ha habilitado `HTTP2` (apartado #Optimization del `aplication.properties` ).
+En este ejercicio desarrollo una API REST para gestionar usuarios empleando `Spring Boot`, `Spring Security` y `Spring Data JPA`. El almacenamiento de los datos se realiza en la base de datos `PostgreSQL` o en memoria usando `H2`, mediante la activación por variable de entorno del modo de persistencia. La API fue documentada con `Open API Swagger` y testeada con `Postman` y pruebas automatizadas con `JUnit`. Los paquetes fueron estructurados siguiendo `Domain Driver Design` y se aplicaron patrones como Adapter, Fábricas, Repositorios entre otros. Para optimizar las consultas dado el volumen de datos manejados se emplea `HATEOAS` para `Paginación` y manejo de hipertexto, compresión `gzip` y se ha habilitado `HTTP2` (apartado #Optimization del `aplication.properties` ).
 
 ## Despliegue
 1. Como IDE de desarrollo se emplea `Intellij IDEA`. Descargar [aquí](https://www.jetbrains.com/es-es/idea/download/).
