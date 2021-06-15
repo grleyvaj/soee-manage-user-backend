@@ -65,7 +65,9 @@ Endpoint #3 Listado de usuarios dados de Alta
    ![printscrenn](readme/get_all_user.PNG)
    
 Se han desarrollado otros endpoints que se encuentan documentados con open-api/swagger:
-- Una vez que el proyecto esté corriendo, podrá acceder a la documentación mediante el enlace: `http://localhost:8085/soee-demo-api-docs`
+- Una vez que el proyecto esté corriendo, podrá acceder a la documentación mediante el enlace:
+
+`http://localhost:8085/soee-demo-api-docs`
 
 ![printscrenn](readme/documentation.PNG)
 
