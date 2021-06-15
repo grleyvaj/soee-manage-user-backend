@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "c332760e-77ca-4ca1-86ad-cbbf7f0d2b47",
+		"name": "User API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gloria\",\r\n    \"age\": 31,\r\n    \"email\": \"leyvajerezgr@gmail.com\",\r\n    \"password\": \"gloria.soee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/enroll",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"leyvajerezgr@gmail.com\",\r\n    \"password\": \"gloria.soee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/authentication",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all enrolled users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMjg1MzMxLCJleHAiOjE2MjMyOTk3MzEsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.kOcyCyLhjNdPcCn3dlwc1ywF8WMoe0Ptc-L3wYfNyyd2rKBwMVNv2_52a_KCRqwZlI59ZvRJL63xFZJhzCu62A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDIyNzkzLCJleHAiOjE2MjMwMzcxOTMsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.bttCuBmoqhBYi-iGMy0rfG2hlbj2yVIf4lvCkjhyDKvf8yJaL-wxmFQ6k1P0A_QCnQkMTKl6mKbFbij_y_rAkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDIyNzkzLCJleHAiOjE2MjMwMzcxOTMsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.bttCuBmoqhBYi-iGMy0rfG2hlbj2yVIf4lvCkjhyDKvf8yJaL-wxmFQ6k1P0A_QCnQkMTKl6mKbFbij_y_rAkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDIzNDEzLCJleHAiOjE2MjMwMzc4MTMsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.pOByiEpSxu1gaqoh1Rzvb4ffnfIymOUBalqGFouG5UnyDdswrtqV2N7XShsUNLA-bh8GFZgz1TCvrnIHUpTP9A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Gloria\",\r\n    \"age\": 31,\r\n    \"email\": \"leyvajerezgr@gmail.com\",\r\n    \"password\": \"gloria.soee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDIyNzkzLCJleHAiOjE2MjMwMzcxOTMsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.bttCuBmoqhBYi-iGMy0rfG2hlbj2yVIf4lvCkjhyDKvf8yJaL-wxmFQ6k1P0A_QCnQkMTKl6mKbFbij_y_rAkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDkyNzM5LCJleHAiOjE2MjMxMDcxMzksInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.jVSdgwDG14THyXY-G4hn2g-MQUIfJAm0kGkbo4fQS7FKwoU-R2hzUkM_2sqDvLNHHwR7t42TNs7lYhqLBx5pUg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"leyvajerezgr@gmail.com\",\r\n    \"old_password\": \"gloria.soee\",\r\n    \"new_password\": \"gloria.soee.2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user by filter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuQGdtYWlsLmNvbSIsImlhdCI6MTYyMzMzNTMyNCwiZXhwIjoxNjIzMzQ5NzI0LCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV19.p045kbGoR-fsMCAC8h01AbSBt0JfEAq44NR5NLIfUNFo6elzgpX2f_nQMf2z99nbuUwte4rNgPx5L3FdtYl1jA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"juan\",\r\n    \"age\": \"\",\r\n    \"email\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/filter?page=0&size=8&sort=id,asc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "8"
+						},
+						{
+							"key": "sort",
+							"value": "id,asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search user by fulltext",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzMDg2ODg5LCJleHAiOjE2MjMxMDEyODksInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.qscW2MV8gjr3AEUEyVR3ujpi9b_6Islts-gwZcx-xcJruH3KmIvZBajT71uhZrGGmmh8FYvGfIstRZKil8rVvA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/filter/chain?chain=31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"filter",
+						"chain"
+					],
+					"query": [
+						{
+							"key": "chain",
+							"value": "31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exist email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZXl2YWplcmV6Z3JAZ21haWwuY29tIiwiaWF0IjoxNjIzNjA2OTM0LCJleHAiOjE2MjM2MjEzMzQsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJBRE1JTiJ9XX0.Oi81vDxtyZ31LDlbo6OFVbLE_GrtvcylrSeHnMSFdY2sqdw8I6KwELWFgJDYwg6OVAY39EwPKBtH1Q3gegdj3w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8085/soee/v1/users/filter/exist?email=leyvajerezgr@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8085",
+					"path": [
+						"soee",
+						"v1",
+						"users",
+						"filter",
+						"exist"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "leyvajerezgr@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
