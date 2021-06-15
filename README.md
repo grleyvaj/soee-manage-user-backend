@@ -59,8 +59,8 @@ Endpoint #2 Autenticar usuarios
    ![printscrenn](readme/authenticate_user.PNG)
    
 Endpoint #3 Listado de usuarios dados de Alta
- - GET /soee/v1/authentication
- - Ejemplo: http://127.0.0.1:8085/soee/v1/authentication
+ - GET /soee/v1/users
+ - Ejemplo: http://127.0.0.1:8085/soee/v1/users
    
    ![printscrenn](readme/get_all_user.PNG)
    
