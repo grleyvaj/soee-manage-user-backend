@@ -207,4 +207,11 @@ public class ManageUserRestController {
 
         return ResponseEntity.ok(existEmail);
     }
+
+    @GetMapping(path = URI_USER + URI_FILTER + "/{email}")
+    public HttpEntity<?> getUserByEmail(@PathVariable String email) {
+        User user = userApplicationService.findByEmail(email);
+        RepresentationModel<UserResponse> userResource = userResourceAssembler.toModel(userAdapter.mapToResponse(user));
+        return ResponseEntity.ok(userResource);
+    }
 }
