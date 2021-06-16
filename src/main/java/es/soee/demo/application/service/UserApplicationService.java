@@ -70,7 +70,7 @@ public class UserApplicationService {
         if (!encoder.matches(oldPassword, user.getPassword())) {
             return false;
         } else {
-            user.setPassword(newPassword);
+            user.setPassword(encoder.encode(newPassword));
             userRepository.save(user);
             return true;
         }
@@ -86,7 +86,7 @@ public class UserApplicationService {
         return userRepository.findAll(specs, pageable);
     }
 
-    public boolean existEmail(String email){
+    public boolean existEmail(String email) {
         return userRepository.findOneByEmail(email).isPresent();
     }
 }
