@@ -13,8 +13,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CorsConfig {
 
-    @Value("${server.port}")
-    private String port;
+    @Value("${server.origins}")
+    private String origins;
 
     /**
      * Specify which domains are authorized and which are not, and what they are authorized for.,
@@ -26,12 +26,11 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") /*	/ENTITY_API/**	*/
-                        .allowedOrigins("http://localhost:" + port)          /*	ALL(*) or http://localhost:port	 (8085 or other port) */
-                        .allowedMethods("PUT", "DELETE", "GET", "POST", "PATCH" /*, other methods*/)
-                        .allowCredentials(true)
-                /*.maxAge(3600);*/             /* You can define maximum number of years*/
-                ;
+                registry.addMapping("/**")
+                        .allowedOrigins(origins)
+                        .allowedMethods("PUT", "DELETE", "GET", "POST", "PATCH")
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
